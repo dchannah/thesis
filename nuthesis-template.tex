@@ -1,0 +1,280 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% nuthesis-template.tex - Miguel A, Lerma - 3/31/2013
+%                         mlerma@math.northwestern.edu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%% DISCLAIMER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% In spite of the effort to accommodate this template and the nuthesis
+% class to the official requirements of the university to write a 
+% Ph.D. dissertation, it is not possible to guarantee that it will 
+% always work, and the author of the dissertation remains responsible
+% for checking that such requirements are actually fulfilled by 
+% his/her final work.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[12pt]{nuthesis}	% The nuthesis class is based on 
+				% amsbook.cls.
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{achemso}
+\usepackage{breqn}
+\usepackage{bibentry}
+\usepackage[english]{babel}
+\usepackage[autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\renewcommand{\vec}[1]{\mathbf{#1}} % Dan's addition - bold vectors.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DATA OF AUTHOR AND DISSERTATION %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{Daniel C. Hannah}
+
+\title{Spectroscopic and Computational Studies of Light and Heat Generation in Semiconductor Nanomaterials}
+
+\degree{DOCTOR OF PHILOSOPHY}  % Default: DOCTOR OF PHILOSOPHY
+
+\field{Chemistry}            % Default: Mathematics
+
+\graduationmonth{August}         % The default is June or December
+                                % depending on current date.
+
+\graduationyear{2015}          % Default: current year.
+
+
+				% Use \includeonly to select the 
+%\includeonly{chap1,chap2,...}	% chapters to include if you are 
+				% using the \include command below.
+				% This way you can latex only a the 
+				% part you are working on, which 
+				% is faster than latexing the entire 
+				% thesis. 
+
+\setcounter{tocdepth}{3}% Include \subsubsection in ToC
+\begin{document}
+%	
+%	THE BODY OF YOUR THESIS STARTS HERE
+%
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Some initial stuff %
+%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter		% Preliminary pages start here.
+
+\maketitle		% Produces the title page.
+
+\copyrightpage		% Creates the copyright page.
+
+
+\abstract		% Abstract.
+
+In crystalline semiconductors, the reduction of material dimensions to the nanometer length scale often has a profound impact on the optical, structural, and thermal properties exhibited by the material. While the optical properties of semiconductor nanocrystals have been studied for over two decades, many fundamental questions persist regarding thermal processes in this material class. For example, on what time scale do excited charge carriers dissipate energy and into which degrees of freedom? How is heat generated during carrier thermalization transported out of the nanocrystal? Can these processes be manipulated by structural modification? In the first part of this thesis, we utilize a combination of ultrafast spectroscopic methods and computational modeling to answer these questions. Overall, our results indicate that heat generation begins with hole thermalization, and that the subsequent transport of heat is heavily influenced by the semiconductor surface structure and surface chemistry. These findings lead us to propose and demonstrate several methods of independently tuning nanocrystal optical and thermal properties. \par
+In the second part of this thesis, we investigate a long standing issue in nanoscience: the efficient emission of light by group-IV nanocrystals. Again, utilizing a combination of optical spectroscopy and theoretical modeling, we are able to attribute long-lived, band-edge photoluminescence from Si nanocrystals to emission from the crystalline core, which remains indirect-gap in character despite substantial quantum confinement. We also attribute rapid, high-energy photoluminescence to a persistent amorphous surface layer. Finally, we explore some of the interesting structural behavior exhibited by group-IV nanocrystals at high pressure.
+
+\acknowledgements	% Acknowledgements (optional).
+
+There are many people to whom I owe a debt of gratitude for their contributions, in some way or another, to the work presented in this thesis. While it would be impossible to thank everyone whose mentorship, input, ideas, or companionship was appreciated along the way, I will do my best. \par
+First and foremost, I must thank my advisors, Professors Richard Schaller and George Schatz. During my time at Northwestern, I yearned to be both an experimentalist and a theoretician, and worked in earnest to develop a deep, genuine understanding of both approaches. Any success I have had in this endeavor has been a result of their expert guidance. Rich, you have been an incredible mentor and friend from the beginning. Your work ethic and approach to scientific research is admirable and incredibly effective. I have benefitted greatly from attempting to emulate it during my time here, and it will continue to benefit me as I move forward in my career. George, your insight and remarkable knowledge of all fields of chemistry have served as both an inspiration and constant source of useful feedback. As someone interested in both theory and experiment, I could not have chosen a better theoretical mentor - you have taught me the caution necessary to produce useful, realistic theoretical results and helped me greatly to understand what computational modeling can and importantly, cannot offer. This awareness has been and will continue to be invaluable to my success as a scientist. Both Rich and George have showed incredible patience with my double-life; Rich was always understanding when I was busy troubleshooting various home-built simulation scripts and George showed the same understanding when the laser was behaving and I was busy collecting all the experimental data I possibly could. It is because of their understanding that I have been able to train in both fields and I am immensely appreciative of it. Thank you both for teaching me to be scientist and making the world a smaller place. \par
+My groupmates in the Schaller and Schatz groups have been both good friends and collaborators along the way. In the Schaller group, Angela Chang and Clare Rowland have been fantastic friends and colleagues, particularly during our beamtime adventures, Speedway runs, and our work in France. More recently, it has been great to welcome Michael Wagner and Matt Kirschner to the group, and I'm confident that the Schaller group will be in good hands going forward. In the Schatz group, I would like to thank Marty Blaber, Jon Mullin, Kevin Kohlstedt, Mike Ross, Andrew Sirjoosingh, and Craig Chapman for sharing their expertise in the "lab" and their companionship away from the UNIX console as well. More generally, I would like to thank the whole Schatz group for providing a congenial, intellectually open, and productive environment to work in.\par
+Many people outside of my research group have also been friends and collaborators. At Argonne National Lab, Maria Chan has taught me a great deal about how physicists approach atomistic modeling, and her input over the course of our many collaborative projects has been invaluable. Dave Gosztola, Vitali Prakapenka, Kiril Zhuravlev, and Haidan Wen have all helped me at various times with experimental work at the Center for Nanoscale Materials and the Advanced Photon Source. At Los Alamos National Lab, my time spent at the High Magnetic Field Laboratory was enjoyable and productive thanks to the assistance of Scott Crooker and the hospitality of Jeff Pietryga. Wenyong Liu, Sandrine Ithurria, and the Talapin group at University Chicago have provided us with many interesting samples for study; the same should be said of Lance Wheeler, Jihua Yang, Nicolaas Kramer, and the Kortshagen group at University of Minnesota. Special thanks are due to Kristen Brown, Ryan Young, and Dick Co in the Wasielewski group for running FSRS measurements. Additionally, Shenyu Kuang, Kelsey Stocker, Prof. Dan Gezelter (and the Gezelter group) at Notre Dame are owed similar gratitude for teaching me about non-equilibrium molecular dynamics and allowing me to visit their group. \par
+I would also like to thank my other thesis committee members, Professors Chad Mirkin and Lincoln Lauhon. They have kindly shared their time and advice with me throughout my time at graduate school, and they have provided useful feedback, constructive criticism, and valuable career guidance during my various meetings with them. I am also grateful for Professor Eric Weitz's feedback as chair of my qualifying exam committee.\par
+Graduate school would not have been the same without the close friends I have made along the way. Nick Calta, Natalie Gruenke, David Weinberg, Megan Shelby, Jason Avila, Stephanie Zaleski, Taylor Page and Charlie Macko in particular have been close friends whose companionship, scientific insight, and commiseration have made graduate school immeasurably more productive and enjoyable. I expect that these friendships will long outlast my time at NU. To the many other people with whom I have had the good fortune to associate, it is unfortunate that I have limited space and time with which to thank you, but know that I will remember the trips to Food for Thought, PLU, Norris, Nevins, and all of the other good times. \par
+The work in this dissertation wouldn't have happened without my family, who have offered unconditional support during my time at Northwestern and well before that. It is because my parents taught me the importance of loving what I do that I embarked on this career path. Finally, I must acknowledge my wife, Amber, for her endless patience and support during the past five years. While also balancing her own graduate work and career, Amber has always kept an open ear as I tried to sort out research-related questions and career options and never fails to ask incisive questions or provide a new perspective. Her love, feedback, and support have made me a better scientist and a better person, and words do not do justice to how lucky I feel that she has decided to share her life with me. I look forward to what the future holds.
+
+%\preface		% Preface (optional).
+
+%This is the preface.
+
+
+
+%% A few more optional pages (uncomment if needed)
+%
+%\listofabbreviations 
+%
+%This is the list of abbreviations (optional).
+%
+%\glossary
+%
+%This is the glossary (optional).
+%
+%\nomenclature
+%
+%This is the nomenclature (optional).
+%
+%% Note that the dedication text must be passed as an argument
+%% of the \dedication command
+%\dedication{\emph{To my parents, who taught me the importance of loving what I do.}}
+%
+
+\clearpage\phantomsection % needed for the hyperlinks to work correctly
+\tableofcontents	% Table of Contents will be automatically
+			% generated and placed here.
+
+\clearpage\phantomsection % needed for the hyperlinks to work correctly
+\listoftables		% List of Tables and List of Figures will be placed
+
+\clearpage\phantomsection % needed for the hyperlinks to work correctly
+\listoffigures		% here, if applicable (optional).
+
+
+
+\mainmatter             % Actual text starts here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Actual text starts here %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% If there is an introduction it must be the first chapter
+
+\include{chap1}
+\include{chap2}
+\include{chap3}
+\include{chap4}
+\include{chap5}
+\include{chap6}
+\include{chap7}
+
+% Alternatively, you may write the chapters in separate
+% files, say chap1.tex, chap2.tex, etc., and include them 
+% with commands:
+
+%\include{chap1}
+
+%\include{chap2}
+
+% The command \includeonly above allows to include a selected 
+% set of chapters only.
+
+% Uncomment the 'singlespace' environment and '\bibsep' command
+% if needed - some bibliographic styles overide the definition
+% of 'thebibliography' in nuthesis.cls
+%
+%\begin{singlespace}
+%\bibsep 12pt
+\clearpage\phantomsection % needed for hyperlikns to work correctly
+%\begin{thebibliography}{xxx}
+%
+%\bibitem{label1} A bibliographic item.  A bibliographic item.  A
+%bibliographic item.  A bibliographic item.
+%\bibitem{label2} Another bibliographic item.  
+%\bibitem{label3} Yet another bibliographic item.  
+%% The usages of \bibitem and \cite{..} are 
+%% explained in Section 4.3 (page 73) of % LaTeX manual.
+%% Or you may use BibTeX.
+%\end{thebibliography}
+%\end{singlespace}
+
+% (The following suggested by Francisco Iacobelli - 5/11/2010)
+% In case, you want to use BibTeX, you should replace (or comment)
+% the bibliography environment.
+% Instead uncomment the following 3 lines and replace <bib file>
+% with your .bib file:
+
+%\renewcommand\refname{\begin{centering}References\end{centering}}
+%\bibliographystyle{achemso} %or another suitable style.
+%\bibliography{diss}
+\backmatter
+\renewcommand\refname{\begin{centering}References\end{centering}}
+\bibliographystyle{achemso} %or another suitable style.
+\bibliography{diss}
+\mainmatter
+\appendix		% Appendix begins here (optional).
+%\appendices	        % If more than one appendix chapters,
+				% use appendices instead of appendix
+
+\include{appendixA}
+\include{appendixB}
+\include{appendixC}
+\include{appendixD}
+\include{appendixE}
+%\include{appendixF}
+
+\begin{vita}                    % Vita (optional).
+
+\begingroup
+\fontsize{10pt}{10pt}\selectfont
+
+\begin{center}
+Daniel C. Hannah \\
+danotechnology@u.northwestern.edu
+\end{center}
+
+\noindent
+\begin{center}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} rrrr}
+\textbf{Education} & & & & \\
+Ohio State University & & Chemistry & &  B.S., \emph{cum laude}, 2010 \\
+Northwestern University & & Chemistry & &  Ph.D., 2015 \\
+& \\
+\end{tabular*}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} rrrr}
+\textbf{Research and Professional Experience} & &   \\
+\emph{Northwestern University} & &    \\
+NSF Predoctoral Fellow & & & & Fall 2010 - present \\
+\emph{Procter \& Gamble} & &    \\
+R\&D Intern, Computational Chemistry Division & & & &   Summer 2010 \\
+R\&D Intern, Tide Technology Division & & & &   Summer 2009 \\
+\emph{Ohio State University} & &  \\
+Undergraduate Researcher, Dutta Lab & & & &   Fall 2008 - Spring 2010 \\
+Undergraduate Researcher, Woodward Lab & & & &   Fall 2007 - Fall 2008 \\
+& & \\
+\end{tabular*}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} rrrr}
+\textbf{Awards}
+\\
+National Science Foundation Graduate Research Fellowship (2012-2015) \\
+Ultrafast Phenomena in Cooperative Systems: GRC Young Investigator Award (2014) \\
+Edmund W. Gelewitz Award (2014) \\
+Joseph Lambert Award (2013) \\
+Invited Student Lecturer (Argonne CNM Users Meeting) (2013) \\
+Donald E. Smith Award for Excellence in 300/400-Level Teaching (2012) \\
+Hierarchical Materials Cluster Program Fellowship (2012) \\
+Gary Booth Scholarship in Chemistry (2008-2010) \\
+& & \\
+\end{tabular*}
+\end{center}
+\noindent
+%\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} rrrr}
+\textbf{Publications}
+\begin{enumerate}
+\item \textbf{Daniel C. Hannah}, J. Daniel Gezelter, Richard D. Schaller, George C. Schatz, "Reverse Non-Equilibrium Molecular Dynamics Demonstrate that Surface Passivation Controls Thermal Transport at Semiconductor-Solvent Interfaces", \emph{ACS Nano} 9 (6), 6278 (2015)
+\item \textbf{Daniel C. Hannah}, Jihua Yang, Nicolaas Kramer, George C. Schatz, Uwe Kortshagen, Richard D. Schaller, "Ultrafast Photoluminescence in Quantum-Confined Silicon Nanocrystals Arises from an Amorphous Surface Layer" \emph{ACS Photonics}, 1 (10), 960 (2014) 
+\item Clare E. Rowland, \textbf{Daniel C. Hannah}, Arnaud Demortiere, Jihua Yang, Uwe Kortshagen, Richard D. Schaller, "Persistence and Resilience of Silicon Nanocrystals to High Temperatures:  Photoluminescent Properties and Si-to-SiC Phase Change." \emph{ACS Nano}, 8 (9), 9219 (2014) 
+\item Clare E. Rowland, Wenyong Liu, \textbf{Daniel C. Hannah}, Maria K.Y. Chan, Dmitri V. Talapin, Richard D. Schaller, "Thermal Stability of Colloidal InP Nanocrystals: Small Inorganic Ligands Boost High-Temperature Photoluminescence." \emph{ACS Nano} 8 (1), 977 (2014) 
+\item \textbf{Daniel C. Hannah}, Kristen E. Brown,  Ryan M. Young, Dick T. Co, Michael R. Wasielewski, George C. Schatz, Richard D. Schaller, "Direct Measurement of Lattice Dynamics and Optical Phonon Excitation in Semiconductor Nanocrystals Using Femtosecond Stimulated Raman Spectroscopy." \emph{Physical Review Letters} 111, 107401 (2013) 
+\item Kenneth O. Aruda, Mario Tagliazucchi, Christina M. Sweeney, \textbf{Daniel C. Hannah}, Emily A. Weiss, "The Role of Interfacial Charge Transfer-Type Interactions in the Decay of Plasmon Excitations in Metal Nanoparticles", \emph{Physical Chemistry Chemical Physics}, 15, 7441 (2013) 
+\item Kenneth O. Aruda, Mario Tagliazucchi, Christina M. Sweeney, \textbf{Daniel C. Hannah}, George C. Schatz, Emily A. Weiss, "Identification of the Parameters through which Surface Chemistry Determines the Lifetime of Hot Electrons in Small Au Nanoparticles", \emph{Proceedings of the National Academy of Sciences}, 110 (11), 4212 (2013) 
+\item \textbf{Daniel C. Hannah}, Sandrine Ithurria, Galyna Krylova, Dmitri V. Talapin, George C. Schatz, and Richard D. Schaller, "Particle-Level Engineering of Thermal Conductivity in Matrix-Embedded Semiconductor Nanocrystals." \emph{Nano Letters}, 12 (11), 5797 (2012) 
+\item \textbf{Daniel C. Hannah}, Sandrine Ithurria, Galyna Krylova, Dmitri V. Talapin, George C. Schatz, and Richard D. Schaller, "Particle-Level Engineering of Thermal Conductivity in Matrix-Embedded Semiconductor Nanocrystals." \emph{Nano Letters}, 12 (11), 5797 (2012) 
+\item Allison M. Dennis, Benjamin D. Mangum, Andrei Piryatinski, Young-Shin Park, \textbf{Daniel C. Hannah}, Joanna L. Casson, Darrick J. Williams, Richard D. Schaller, Han Htoon, and Jennifer A. Hollingsworth, "Suppressed Blinking and Auger Recombination in Near-Infrared Type-II Nanocrystal Quantum Dots." \emph{Nano Letters}, 12 (11), 5545 (2012) 
+\item \textbf{Daniel C. Hannah}, Nicholas J. Dunn, Sandrine Ithurria, Dmitri V. Talapin, Lin X. Chen, Matthew Pelton, George C. Schatz, and Richard D. Schaller, "Observation of Size-Dependent Thermalization in CdSe Nanocrystals Using Time-Resolved Photoluminescence Spectroscopy." \emph{Physical Review Letters} 107, 177403 (2011) 
+\item Aparna Iyer, Joselyn Del-Pilar, Edward Kissel, Lisa Stafford, Eric Nagji, {\bf Daniel Hannah}, Prabir Dutta, Steven Suib, "Water Oxidation in Visible Light Using Manganese Oxide Octahedral Molecular Sieves." \emph{Abs. Pap. Am. Chem. Soc} 241 (2011) 
+\end{enumerate}
+
+\textbf{Invited Talks}
+\begin{enumerate}
+\item "Spectroscopic Characterization of Phonon Generation and Transport in Semiconductor Nanocrystals", \emph{SIMES Seminar, Stanford Linear Accelerator Center}, Menlo Park, CA (2015)
+
+\item "Phonon dynamics and surface effects in nanocrystalline materials", \emph{CINT Seminar, Los Alamos National Laboratory}, Los Alamos, NM (2013)
+\item "Using surface chemistry to tune active plasmonic response", \emph{Laboratory of Nanotechnology, Instrumentation and Optics}, University of Technology of Troyes, Troyes, France (2013)
+\item "Optical and Structural Properties of Si Nanoparticles at High Pressures", \emph{CNM Users Meeting}, Argonne National Laboratory, IL (2013)
+\item "Characterizing acoustic phonon transport rates in matrix-embedded colloidal quantum dot systems", \emph{Institut d'Electronique Fondamentale}, Universite Paris Sud, France (2012)
+\item "Optical characterization of acoustic phonon outflow from semiconductor nanocrystals", \emph{Joint NSRC Workshop on Nanoparticle Science}, Argonne National Laboratory, IL (2012)
+\end{enumerate}
+\endgroup
+
+\end{vita}
+
+
+\end{document}
+
